@@ -10,3 +10,7 @@ while (numero != 0) {
   numTotales++;
   numero: number = Number(prompt("ingrese otro numero"));
 }
+if(numTotales>0){
+  porcentajes = numPositivos*100/numTotales;
+  console.log(numPositivos; "numero positivos" ; porcentajes; "porcentaje total" ) 
+}
