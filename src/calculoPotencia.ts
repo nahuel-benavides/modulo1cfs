@@ -6,6 +6,7 @@ function calculoPotencia() {
   }
   console.log("el resultado es", resultado);
 }
+
 let base: number = Number(prompt("ingrese base"));
 let exponente: number = Number(prompt("ingrese exponente"));
 let resultado: number = 0;
