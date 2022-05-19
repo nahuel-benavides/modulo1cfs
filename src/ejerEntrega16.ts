@@ -1,4 +1,4 @@
-function cantDivisores(dividendo: number, divisor: number): boolean {
+function esMultiplo(dividendo: number, divisor: number): boolean {
   if (dividendo % divisor === 0) {
     return true;
   } else {
@@ -6,13 +6,18 @@ function cantDivisores(dividendo: number, divisor: number): boolean {
   }
 }
 
-let numero1: number = Number(prompt("ingrese un numero"));
+function cantidadDivisores(numero: number): number {
+  let cantidad: number = 0;
+  let divisor: number;
 
-
-let divisor: boolean = cantDivisores(numero1);
-
-if divisor === true) {
-  console.log("el numero " + numero1 + " es divisor");
+  for (divisor = 1; divisor <= numero; divisor++) {
+    if (esMultiplo(numero, divisor)) {
+      cantidad++;
+    }
+    return cantidad;
+  }
 }
 
+let numero1: number = Number(prompt("ingrese un numero "));
 
+console.log(cantidadDivisores(numero1));
