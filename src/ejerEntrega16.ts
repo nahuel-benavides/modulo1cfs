@@ -10,8 +10,8 @@ function cantidadDivisores(numero: number): number {
   let cantidad: number = 0;
   let divisor: number;
 
-  for (divisor = 1; divisor <= numero; divisor++) {
-    if (esMultiplo(numero, divisor)) {
+  for (divisor = cantidad; divisor <= numero; divisor++) {
+    if (esMultiplo(numero1, divisor)) {
       cantidad++;
     }
     return cantidad;
@@ -20,4 +20,5 @@ function cantidadDivisores(numero: number): number {
 
 let numero1: number = Number(prompt("ingrese un numero "));
 
-console.log(cantidadDivisores(numero1));
+let Divisores: number = cantidadDivisores(numero1);
+console.log(Divisores);
