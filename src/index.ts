@@ -1,4 +1,4 @@
-let primerNumero: number = prompt("ingrese numero1");
+2let primerNumero: number = prompt("ingrese numero1");
 console.log("el primer numero es", primerNumero);
 let segundoNumero: number = prompt("ingrese numero2");
 console.log("el segundo numero es", segundoNumero);
