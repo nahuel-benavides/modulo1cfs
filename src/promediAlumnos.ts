@@ -1,26 +1,45 @@
-let numeroAlumnos:number=Number(prompt("ingrese el numero de alumnos"));
-let alumnos:string[] = new Array (numeroAlumnos);
-let notaFinal:number[] = new Array (numeroAlumnos);
-let indice:number= 0;
-let primTrim:number=0;
-let segTrim:number=0;
-let terTrim:number=0;
-let suma:number = primTrim + segTrim + terTrim;
-
-
-
-for(indice =0;indice<numeroAlumnos;indice++){ 
-  alumnos[indice]= prompt("ingrese el nombre del alumno");
+function obtenerPromedioAlumno(indice: number): number {
+  let suma =
+    (arrayPrimTrim[indice] + arraySegTrim[indice] + arrayTerTrim[indice]) / 3;
+  return suma;
 }
 
-
-for(indice =0;indice<numeroAlumnos;indice++){ 
-  primTrim=Number(prompt("ingrese la nota final del primer trimestre"));
-  segTrim=Number(prompt("ingrese la nota final del segundo trimestre"));
-  terTrim=Number(prompt("ingrese la nota final del tercer trimestre"));
-  suma = suma%3;
+function obtenerPosicion(alumno: string): number {
+  let alumnos: string = "B";
+  let posicion: number = -1;
+  for (let indice: number = 0; indice < 3; indice++) {
+    if (arrayAlumnos[indice] === alumnos) {
+      posicion = indice;
+    }
+  }
+  return posicion;
 }
 
-for(indice =0;indice<numeroAlumnos;indice++){ 
-  notaFinal[numeroAlumnos]=  
+function cargarDatos() {
+  for (let indice: number = 0; indice < 3; indice++) {
+    arrayAlumnos[indice] = prompt("ingrese el nombre del alumno");
+    arrayPrimTrim[indice] = Number(prompt("ingrese nota del primer trimestre"));
+    arraySegTrim[indice] = Number(prompt("ingrese nota del segundo trimestre"));
+    arrayTerTrim[indice] = Number(prompt("ingrese nota del tercer trimestre"));
+  }
 }
+
+let arrayAlumnos: string[] = new Array(10);
+let arrayPrimTrim: number[] = new Array(10);
+let arraySegTrim: number[] = new Array(10);
+let arrayTerTrim: number[] = new Array(10);
+
+cargarDatos();
+let alumno: string = prompt("ingrese nombre del alumno");
+console.log(obtenerPromedioAlumno(obtenerPosicion(alumno)));
+
+d; /* 
+ let alumnos:number=Number (prompt("ingrese el nombre del alumno"));let primTrim:number=Number(prompt("ingrese nota del primer trimestre"));
+let segTrim:number=Number(prompt("ingrese nota del segundo trimestre"));
+let terTrim:number=Number(prompt("ingrese nota del tercer trimestre"));
+for(let indice:number = 0;indice<3;indice++){ 
+console.log(arrayAlumnos[indice]);
+console.log(arrayPrimTrim[indice]);
+console.log(arraySegTrim[indice]);
+console.log(arrayTerTrim[indice]);
+}*/
