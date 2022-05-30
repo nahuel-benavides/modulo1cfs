@@ -30,5 +30,4 @@ for (indice = 0; indice < numeroAlumnos; indice++) {
   terTrim = Number(prompt("ingrese la nota final del tercer trimestre"));
 }
 
-let nombreAlumno: string = prompt("ingrese nombre del alumno");
-console.log(PromedioAlumno(posicionAlumno(nombreAlumno)));
+console.log(PromedioAlumno(posicionAlumno(alumnos[indice])));
